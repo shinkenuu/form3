@@ -1,3 +1,20 @@
+# My Solution
+
+**This is my first Go project**
+
+### clients/accounts.go
+
+- Dirty code at `doRequest`. Maybe use a struct to pass arguments to it is more Go idiomatic? It doesn't handle redirects for simplicity sake. There is also a lot of responsability in it D:
+
+### clients/models.go
+
+- I removed the pointers of the fields with limited values because of the Should Do "be simple and concise" plus the Should Not Do "client-side validation". There is A LOT of boilerplate in Go to define something like a Enum. When I finished there were more code for Enums than attributes in the Account model :l
+I truly hope to get to know a better way of doing this in Go
+
+### main.go
+
+- I would love to do the testing with Go's testing package, but as the test requires, the test must run against the fake API and, as far I read, Go's tests can't and shouldn't have a order for running. Yes, I could have done unit testing but it seems redundant and like extra work that I believe will harm the test more than benefit it.
+
 # Form3 Take Home Exercise
 
 Engineers at Form3 build highly available distributed systems in a microservices environment. Our take home test is designed to evaluate real world activities that are involved with this role. We recognise that this may not be as mentally challenging and may take longer to implement than some algorithmic tests that are often seen in interview exercises. Our approach however helps ensure that you will be working with a team of engineers with the necessary practical skills for the role (as well as a diverse range of technical wizardry). 
